@@ -108,7 +108,7 @@ proxy = NodeSelect
 土耳其 = NameKeyword, FilterKey = "(?i)(土耳其|TU|Turkey)"
 印度 = NameKeyword, FilterKey = "(?i)(印度|IN|IND|孟买|新德里|高知|Republic of India|India)"
 德国 = NameKeyword, FilterKey = "(?i)(德国|DEU|DE|柏林|慕尼黑|汉堡|科隆|Germany)"
-加拿大 = NameKeyword, FilterKey = "(?i)(加拿大|CA|渥太华)
+加拿大 = NameKeyword, FilterKey = "(?i)(加拿大|CA|渥太华)"
 冷门地区 = NodeSelect
 ip = NameRegex,FilterKey = ".*(新加坡)"
 TK•KR = NodeSelect
