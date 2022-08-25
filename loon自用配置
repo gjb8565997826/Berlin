@@ -16,7 +16,7 @@ ipv6 = false
 skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, *.local, passenger.t3go.cn,e.crashlynatics.com, yunbusiness.ccb.com
 bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.18.0.0/15,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
 # DNS 服务器
-dns-server = system,119.29.29.29,114.114.114.114,223.5.5.5
+dns-server = system,119.29.29.29,114.114.114.114,223.5.5.5,8.8.8.8
 doq-server = quic://i.passcloud.xyz:784,quic://a.passcloud.xyz:784,quic://c.passcloud.xyz:784,quic://x.passcloud.xyz:784,quic://h.iqiq.io:784
 doh-server = https://dns.alidns.com/dns-query,https://i.passcloud.xyz/dns-query,https://a.passcloud.xyz/sz,https://a.passcloud.xyz/hk,https://a.passcloud.xyz/cdn
 # Wi-Fi 访问
@@ -67,13 +67,14 @@ dl.l.google.com = server:119.29.29.29
 Proxy = select,proxy,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Blackhole.png
 FINAL = select,DIRECT,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
 节点选择 = select,HK,TW,SG,KR,JP,US,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png
-苹果服务 = select,DIRECT,US,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
+苹果服务 = select,DIRECT,US,TU,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
 Google = select,HK,TW,SG,US,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
 Telegram = url-test,HK,SG,TW,US,url = http://cp.cloudflare.com/generate_204,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
 YouTube = select,HK,KR,US,TW,JP,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
 Netflix = select,SG,HK,TW,US,KR,JP,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png
 Disney = select,SG,HK,TW,US,KR,JP,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney+.png
 港台番剧 = select,DIRECT,TW,HK,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_4.png
+Emby =select,DIRECT,HK,US,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
 Tiktok = select,TK-JP,TK-KR,TK-US,TK-TW,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/TikTok_1.png
 国外媒体 = select,SG,HK,TW,KR,US,JP,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/enet.png
 IP = select,ip,DIRECT,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Blinkload.png
@@ -81,14 +82,14 @@ HK = url-test,香港,url = http://cp.cloudflare.com/generate_204,interval = 600,
 TW = url-test,台湾,url = http://cp.cloudflare.com/generate_204,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
 SG = url-test,新加坡,url = http://cp.cloudflare.com/generate_204,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
 KR = url-test,韩国,url = http://cp.cloudflare.com/generate_204,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
-JP = url-test,日本,url = http://cp.cloudflare.com/generate_204,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
-US = url-test,美国,url = http://cp.cloudflare.com/generate_204,interval = 600,tolerance = 50,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
-RU = select,俄罗斯,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Russia.png
-TU = select,土耳其,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Turkey.png
-UK = select,英国,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/UK.png
-IN = select,印度,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/India.png
-DE = select,德国,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Germany.png
-CA = select,加拿大,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Canada.png
+JP = fallback,日本,url = http://cp.cloudflare.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+US = fallback,美国,url = http://cp.cloudflare.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+RU = fallback,俄罗斯,url = http://cp.cloudflare.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Russia.png
+TU = fallback,土耳其,url = http://cp.cloudflare.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Turkey.png
+UK = fallback,英国,url = http://cp.cloudflare.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/UK.png
+IN = fallback,印度,url = http://cp.cloudflare.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/India.png
+DE = fallback,德国,url = http://cp.cloudflare.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Germany.png
+CA = fallback,加拿大,url = http://cp.cloudflare.com/generate_204,interval = 600,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Canada.png
 冷门 = select,冷门地区,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/UN.png
 TK-TW = select,TK•TW,img-url =  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png
 TK-JP = select,TK•JP,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
@@ -97,7 +98,7 @@ TK-US = select,TK•US,img-url = https://raw.githubusercontent.com/Koolson/Qure/
 
 [Remote Filter]
 proxy = NodeSelect
-香港 = NameRegex,FilterKey = "(?i)(港|HK|Hong)"
+香港 = NameRegex,FilterKey = "(?i)(香港)"
 台湾 = NameRegex, FilterKey = "(?i)(台|Tai)"
 日本 = NameRegex, FilterKey = "(?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan)"
 韩国 = NameRegex, FilterKey = "(?i)(KR|Korea|KOR|首尔|韩|韓)"
@@ -108,7 +109,7 @@ proxy = NodeSelect
 土耳其 = NameKeyword, FilterKey = "(?i)(土耳其|TU|Turkey)"
 印度 = NameKeyword, FilterKey = "(?i)(印度|IN|IND|孟买|新德里|高知|Republic of India|India)"
 德国 = NameKeyword, FilterKey = "(?i)(德国|DEU|DE|柏林|慕尼黑|汉堡|科隆|Germany)"
-加拿大 = NameKeyword, FilterKey = "(?i)(加拿大|CA|渥太华)"
+加拿大 = NameKeyword, FilterKey = "(?i)(加拿大|渥太华)"
 冷门地区 = NodeSelect
 ip = NameRegex,FilterKey = ".*(新加坡)"
 TK•KR = NodeSelect
@@ -117,7 +118,7 @@ TK•US = NodeSelect
 TK•TW = NodeSelect
 
 [Remote Rule]
-https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Reject_Rule/Reject_Rule.rule,policy=REJECT, tag=测试, enabled=false
+#https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Reject_Rule/Reject_Rule.rule,policy=REJECT, tag=测试, enabled=false
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Google/Google.list, policy=Google, tag=Google, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GoogleVoice/GoogleVoice.list, policy=US, tag=GoogleVoice, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/iCloud/iCloud.list, policy=DIRECT, tag=iCloud, enabled=true
@@ -129,18 +130,15 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Discord/Discord.list, policy=HK, tag=Discord, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTube/YouTube.list, policy=YouTube, tag=YouTube, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Telegram/Telegram.list, policy=Telegram, tag=Telegram, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list, policy=DIRECT, tag=中国大陆A, enabled=true
-https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list, policy=DIRECT, tag=中国大陆B, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/ChinaIPs/ChinaIPs.list, policy=DIRECT, tag=中国IP, enabled=true
 https://raw.githubusercontent.com/NobyDa/Script/master/Surge/Bilibili.list, policy=港台番剧, tag=Bilibili, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Emby/Emby.list, policy=DIRECT, tag=Emby, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Emby/Emby.list, policy=Emby, tag=Emby, enabled=true
 https://raw.githubusercontent.com/Semporia/TikTok-Unlock/master/Loon/TikTok.list, policy=Tiktok, tag=TikTok, enabled=true
 https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Rewrite/AdBlock/StartUp.conf, policy=REJECT, tag=广告, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/XiaoHongShu/XiaoHongShu.list, policy=IP, tag=小红书分流, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Baidu/Baidu.list, policy=IP, tag=百度分流, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Baidu/Baidu.list, policy=IP, tag=Baidu, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/ByteDance/ByteDance.list, policy=IP, tag=字節跳動, parser-enable=true, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HuYa/HuYa.list, policy=DIRECT, tag=虎牙, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/TestFlight/TestFlight.list, policy=节点选择, tag=TestFlight, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/TestFlight/TestFlight.list, policy=苹果服务, tag=TestFlight, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Apple/Apple.list, policy=苹果服务, tag=Apple, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GlobalMedia/GlobalMedia.list, policy=国外媒体, tag=国外媒体, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Proxy/Proxy.list, policy=节点选择, tag=全球规则(1), enabled=true
@@ -180,6 +178,7 @@ https://raw.githubusercontent.com/VirgilClyne/VirgilClyne/main/modules/ASN/ASN.s
 https://raw.githubusercontent.com/app2smile/rules/master/plugin/bilibili.plugin, policy=港台番剧, tag=bilibili去广告(iOS15), img-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/BiliBili.png, enabled=true
 https://raw.githubusercontent.com/VirgilClyne/iRingo/main/plugin/TestFlight.plugin, enabled=true
 https://raw.githubusercontent.com/VirgilClyne/iRingo/main/plugin/Location.plugin, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Display%20Netflix%20Ratings.plugin, tag=奈飞迪士尼评分, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix_Letter.png, enabled=true
 https://raw.githubusercontent.com/app2smile/rules/master/plugin/tieba.plugin, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/baidu.png, enabled=true
 https://raw.githubusercontent.com/VirgilClyne/VirgilClyne/main/modules/General/General.plugin, enabled=true
 https://raw.githubusercontent.com/VirgilClyne/VirgilClyne/main/modules/DNS/DNS.plugin, enabled=true
@@ -196,7 +195,7 @@ https://raw.githubusercontent.com/ArriettyQAQ/networktools/main/script/Douyin/Do
 https://raw.githubusercontent.com/Semporia/TikTok-Unlock/master/Loon/TikTok-KR.plugin, policy=Tiktok, tag=TikTok–KR, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/TikTok_1.png, enabled=false
 https://raw.githubusercontent.com/Semporia/TikTok-Unlock/master/Loon/TikTok-JP.plugin, policy=Tiktok, tag=TikTok–JP, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/TikTok_1.png, enabled=false
 https://raw.githubusercontent.com/Semporia/TikTok-Unlock/master/Loon/TikTok-US.plugin, policy=Tiktok, tag=TikTok–US, img-url=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/TikTok_1.png, enabled=false
-https://raw.githubusercontent.com/Tartarus2014/Loon-Script/master/Plugin/Display%20Netflix%20Ratings.plugin, tag=奈飞迪士尼评分, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix_Letter.png, enabled=true
+
 
 [MITM]
 hostname = -*amemv.com,-*snssdk.com,mb3admin.com,*.wtzw.com,notability.com
