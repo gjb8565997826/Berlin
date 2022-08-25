@@ -118,7 +118,8 @@ TK•US = NodeSelect
 TK•TW = NodeSelect
 
 [Remote Rule]
-#https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Reject_Rule/Reject_Rule.rule,policy=REJECT, tag=测试, enabled=false
+https://raw.githubusercontent.com/bunizao/TutuBetterRules/tutu/RuleList/DOMAlN/Anti-IPCheck.list, policy=IP, tag=微信Anti-IP, enabled=false
+https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Reject_Rule/Reject_Rule.rule,policy=REJECT, tag=测试, enabled=false
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Google/Google.list, policy=Google, tag=Google, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GoogleVoice/GoogleVoice.list, policy=US, tag=GoogleVoice, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/iCloud/iCloud.list, policy=DIRECT, tag=iCloud, enabled=true
