@@ -102,9 +102,9 @@ hide-udp = 0
 𝕱𝖆𝖘𝖙𝕮𝖑𝖔𝖚𝖉 = select, policy-path=sublink
 𝕮𝖊𝖎𝖑𝖎𝖓𝖌𝕮𝖑𝖔𝖚𝖉 = select,policy-path=subblink
 𝖃𝕾𝖀𝕾 = select,policy-path=sublink
-𝖎𝕼𝖟𝖔𝖓𝖊 = srlect,policy-path=sublink
+𝖎𝕼𝖟𝖔𝖓𝖊 = select,policy-path=sublink
 # > 以下是策略组 需先配置好sub-store使用
-𝐏𝐫𝐨𝐱𝐲 = select, 𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐜, 𝐅𝐚𝐥𝐥𝐛𝐚𝐜𝐤, 🇭🇰Hong Kong, 🇨🇳Taiwan, 🇸🇬Singapore, 🇯🇵Japan, 🇺🇸United States, no-alert=0, hidden=1, include-all-proxies=0
+𝐏𝐫𝐨𝐱𝐲 = select, 𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐜, 𝐅𝐚𝐥𝐥𝐛𝐚𝐜𝐤, HK, TW, SG, JP, US, KR, no-alert=0, hidden=0, include-all-proxies=0
 𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐜 = url-test, policy-path=https://sub.store/download/collection/Surge, url=http://www.gstatic.com/generate_204, interval=600, tolerance=50
 𝐅𝐚𝐥𝐥𝐛𝐚𝐜𝐤 = fallback, policy-path=https://sub.store/download/collection/Surge, url=http://www.gstatic.com/generate_204, interval=600, tolerance=50
 HK = url-test, policy-path=https://sub.store/download/collection/Surge, policy-regex-filter=港|🇭🇰|香港|HK|Hong, interval=600, tolerance=50,update-interval=43200, no-alert=0, hidden=0, include-all-proxies=0
