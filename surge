@@ -114,10 +114,10 @@ SG = url-test, policy-path=https://sub.store/download/collection/Surge, policy-r
 US = url-test, policy-path=https://sub.store/download/collection/Surge, policy-regex-filter=美|🇺🇸|美国|US|States|American, interval=600, tolerance=50,update-interval=43200, no-alert=0, hidden=0, include-all-proxies=0
 KR = url-test, policy-path=https://sub.store/download/collection/Surge, policy-regex-filter=KR|Korea|KOR|首尔|韩|韓, interval=600, tolerance=50,update-interval=43200, no-alert=0, hidden=0, include-all-proxies=0
 Apple = select, DIRECT, US
-Google = selet, HK, SG, TW, US
+Google = select, HK, SG, TW, US
 📺 𝒃𝒊𝒍𝒊𝒃𝒊𝒍𝒊 = select, DIRECT, HK, TW
 🎥 𝑫𝒊𝒔𝒏𝒆𝒚+ = select, HK, SG
-🎥 𝑵𝒆𝒕𝒇𝒍𝒊𝒙 = select, SG, TW, JP, US
+🎥 𝑵𝒆𝒕𝒇𝒍𝒊𝒙 = select, SG, TW, JP, US 
 ✉️ 𝑻𝒆𝒍𝒆𝒈𝒓𝒂𝒎 = select, 𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐜, SG, US
 🎬 𝑻𝒊𝒌𝑻𝒐𝒌 = select,TW, SG, JP, US, KR
 🕊️ 𝑻𝒘𝒊𝒕𝒕𝒆𝒓 = select, 𝐀𝐮𝐭𝐨𝐦𝐚𝐭𝐢𝐜, HK, TW, US
